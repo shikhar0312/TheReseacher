@@ -8,7 +8,7 @@ class CriticOutput(BaseModel):
     feedback: str = Field(description="Specific, actionable feedback notes if decision is 'REVISE'. If 'APPROVED', leave empty or say 'Draft is approved.'")
 
 def critic_node(state: ResearchState):
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperature=0)
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
     structured_llm = llm.with_structured_output(CriticOutput)
 
     # We provide the draft and citations to the critic
