@@ -57,7 +57,7 @@ cp .env.example .env
 
 ```bash
 # Start the backend server
-uv run python app/main.py
+uv run python -m app.main
 ```
 *The API will be available at `http://localhost:8000`.*
 

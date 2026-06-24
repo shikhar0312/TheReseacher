@@ -1,6 +1,6 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import SystemMessage, HumanMessage
-from langchain_tavily import TavilySearchResults
+from langchain_tavily import TavilySearch
 from app.state import ResearchState
 import json
 
@@ -22,7 +22,7 @@ def researcher_node(state: ResearchState):
     except Exception as e:
         queries = [state['main_task']]
 
-    search = TavilySearchResults(max_results=3)
+    search = TavilySearch(max_results=3)
     
     new_findings = []
     
