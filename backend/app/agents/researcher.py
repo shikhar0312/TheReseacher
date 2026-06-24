@@ -5,7 +5,7 @@ from app.state import ResearchState
 import json
 
 def researcher_node(state: ResearchState):
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
+    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
     
     # Simple query generation
     query_prompt = f"Generate 1-3 distinct specific search queries to research the following topic or address the latest critique. Topic: {state['main_task']}\nCritique notes: {state.get('critique_notes', '')}\nReturn only a JSON list of strings."

@@ -8,7 +8,7 @@ class SupervisorDecision(BaseModel):
     reasoning: str = Field(description="A detailed explanation of why this decision was made")
 
 def supervisor_node(state: ResearchState):
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
+    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
     structured_llm = llm.with_structured_output(SupervisorDecision)
 
     draft_exists = bool(state.get("draft"))

@@ -14,7 +14,7 @@ class WriterOutput(BaseModel):
     citations: Dict[str, CitationDict] = Field(description="A dictionary mapping citation numbers (as strings, e.g., '1') to their source URL and title.")
 
 def writer_node(state: ResearchState):
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
+    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
     structured_llm = llm.with_structured_output(WriterOutput)
 
     # Format findings into a string with clear indices
