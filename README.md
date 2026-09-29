@@ -1,6 +1,6 @@
-# Multi-Agent Research Assistant
+# TheResearcher
 
-Welcome to the **Multi-Agent Research Assistant**! This is my final project.
+Welcome to **TheResearcher**! This is my final project.
 
 ## Overview
 
