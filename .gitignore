@@ -91,3 +91,7 @@ future-plans/
 # drift from them silently.
 /PRESENTATION.md
 backend/research_engine/_build.py
+
+# AI Agent instructions
+AGENTS.md
+CLAUDE.md
